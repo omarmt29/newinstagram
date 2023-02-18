@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import StoryItem from './StoryItem'
-import { userlist } from '../services/userList'
+import { userlist } from '../services/services'
 
 export const StoryCard = () => {
 

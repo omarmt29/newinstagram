@@ -3,14 +3,16 @@ import { Feed } from '../components/Feed'
 import Header from '../components/Header'
 
 
-export const Home = () => {
 
+
+export const Home = () => {
+    
     return (
         <div className=" bg-slate-100 dark:bg-black h-full">
 
             <div className="fixed top-0 w-full z-10">
 
-                <Header />
+                <Header  />
 
             </div>
 
