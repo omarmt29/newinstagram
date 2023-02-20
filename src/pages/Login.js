@@ -35,10 +35,12 @@ export const Login = () => {
             email: user.email,
             password: user.password,
         })
-        if (!data.session) {
-            seterror(false)
+        if (data.user) {
+            console.log(data)
+            setemail(true)
         } else {
-        
+            console.log(error)
+            seterror(false)
         }
 
 
