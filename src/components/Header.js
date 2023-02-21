@@ -90,8 +90,6 @@ export default function Header() {
     }
 
 
-
-
     return (
         <div className=' bg-white dark:bg-black transition-all dark:border-none  border-2 border-gray-200'>
             <div className='max-w-7xl mx-auto sm:py-2 flex items-center justify-between px-5 '>

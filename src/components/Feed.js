@@ -19,7 +19,7 @@ export const Feed = () => {
        
         gettingdata()
         
-    }, [])
+    }, [data])
 
     return (
         <div className='max-w-7xl mt-2 sm:mt-7 mx-auto grid grid-cols-3 space-x-6'>
