@@ -4,14 +4,13 @@ import { Fragment, useState, useEffect, useRef } from 'react'
 // import { Dialog, Transition } from '@headlessui/react'
 import { FaMoon, FaRegMoon } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import { useNavigate, useLocation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { Dialog, Transition } from '@headlessui/react'
 
 export default function Header() {
 
     const [darkmode, setdarkmode] = useState(true);
     const navegacion = useNavigate();
-    const location = useLocation();
     const [sesion, setsesion] = useState(false)
     const cancelButtonRef = useRef(null)
     const [open, setOpen] = useState(false)
@@ -27,9 +26,6 @@ export default function Header() {
         }
     }
 
-    useEffect(() => {
-        handlerDark();
-    }, [])
 
     const handlerLogout = (e) => {
         e.preventDefault()
@@ -37,13 +33,21 @@ export default function Header() {
         navegacion('/login')
     }
 
+    
+
     useEffect(() => {
 
-        if (location.pathname === "/home") {
-            setsesion(true)
-        } else {
-            setsesion(false)
+        const verifyroute = () => {
+            const route = window.location.pathname;
+            if ( route === "/home") {
+                setsesion(true)
+            } else {
+                setsesion(false)
+            }
+
         }
+      
+        verifyroute()
 
     }, [navegacion])
 
