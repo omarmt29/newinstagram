@@ -24,7 +24,7 @@ export const posts = async () => {
 export const getsession = async () => {
 
     const { data, error } = await supabase.auth.getSession()
-    return data, error
+    return data + error
 
 }
 
